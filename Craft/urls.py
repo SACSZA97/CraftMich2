@@ -23,6 +23,8 @@ from base import views as views_base
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ca/', views.ca, name="ca"),
+    path('registro/', views_base.registro, name="Registro"),
+    path('login/', views_base.login, name="Login"),
     path('', views_base.Carrusel, name="Carrusel")
 ]
 
