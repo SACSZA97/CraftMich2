@@ -8,13 +8,9 @@ from .models import Contactos
 # Register your models here.
 class AdministrarModelo(admin.ModelAdmin):
     readonly_fields = ('created', 'updated')
-    list_display = ('nombre', 'producto', 'precio','correo', 'descripcion', 'numero')
-    search_fields =('nombre', 'producto', 'precio', 'numero')
+    list_display = ('id','producto', 'precio', 'descripcion')
+    search_fields =('id', 'producto', 'precio')
     date_hierarchy = 'created'
-<<<<<<< Updated upstream
-    list_filter =('nombre', 'producto', 'precio', 'numero')
-admin.site.register(Articulos, AdministrarModelo)
-=======
     list_filter =('id', 'producto', 'precio',)
 admin.site.register(Articulos, AdministrarModelo)
 admin.site.register(Contactos)
@@ -23,4 +19,3 @@ admin.site.register(Contactos)
 
 
 
->>>>>>> Stashed changes

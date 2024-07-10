@@ -15,17 +15,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from michoacan import views
 from django.conf import settings
 from base import views as views_base
+from django.conf.urls.static import static
+from michoacan import views as views_mich
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ca/', views.ca, name="ca"),
-<<<<<<< Updated upstream
-    path('', views_base.Carrusel, name="Carrusel")
-=======
     path('ForCarrusel/',views_base.contacto,name="Contacto"),
     path('registrar/',views_base.registrar,name="Registrar"),
     path('bienvenida/', views.bienvenida, name="bienvenida"),
@@ -41,7 +40,6 @@ urlpatterns = [
     path('editarEvento/<int:id>/',views_mich.editarEvento,name='Editar'),
     path('Contactos/',views_base.Contactos,name="Contactos"),
      path('eventos', views_mich.eventos, name="eventos"),
->>>>>>> Stashed changes
 ]
 
 if settings.DEBUG:

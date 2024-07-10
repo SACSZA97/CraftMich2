@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'michoacan',
-    'base.apps.BaseConfig'
+    'base.apps.BaseConfig',
+    'crispy_forms',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +128,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import os
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'

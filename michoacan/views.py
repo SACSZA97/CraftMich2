@@ -1,18 +1,12 @@
 from django.shortcuts import render, HttpResponse
-<<<<<<< Updated upstream
-=======
 from .forms import CrearEventoForm,EventosForm
 from .models import CrearEvento,Eventos
 from django.shortcuts import get_object_or_404
->>>>>>> Stashed changes
 
 
 
 # Create your views here.
 def ca(request):
-<<<<<<< Updated upstream
-    return render(request, "michoacan/ca.html")
-=======
     return render(request, "michoacan/ca.html")
 
 def bienvenida(request):
@@ -72,4 +66,3 @@ def eventos(request):
     eventos= Eventos.objects.all()
     return render(request,"michoacan/eventos.html", {'eventos':eventos})
 
->>>>>>> Stashed changes

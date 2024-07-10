@@ -1,8 +1,4 @@
 from django.contrib import admin
-<<<<<<< Updated upstream
-
-# Register your models here.
-=======
 from .models import CrearEvento
 from .models import Eventos
 
@@ -25,4 +21,3 @@ admin.site.register(Eventos, administrarEventos)
 
 
 
->>>>>>> Stashed changes

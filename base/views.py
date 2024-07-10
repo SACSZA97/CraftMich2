@@ -1,19 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login as auth_login
+from django.contrib.auth.forms import AuthenticationForm
 from .models import Articulos
-<<<<<<< Updated upstream
-=======
 from .form import LoginForm
 from .forms import ArticulosForm,ContactosForm
 from django.http import HttpResponse
 from django.views.generic import View
->>>>>>> Stashed changes
 
 # Create your views here.
 def Carrusel(request):
     articulos=Articulos.objects.all()
     return render(request,"base/Carrusel.html", {'articulos':articulos})
-<<<<<<< Updated upstream
-=======
 
 def registrar(request):
     if request.method == 'POST':
@@ -91,4 +89,3 @@ def Contactos(request):
 
 
     return render(request,"base/contactanos.html", data)
->>>>>>> Stashed changes

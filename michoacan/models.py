@@ -1,8 +1,7 @@
 from django.db import models
 
+
 # Create your models here.
-<<<<<<< Updated upstream
-=======
 class CrearEvento(models.Model):
     id = models.AutoField(primary_key=True,verbose_name="Id Evento")
     nombre = models.TextField(verbose_name="Nombre del Evento")
@@ -37,4 +36,3 @@ class Eventos(models.Model):
     def __str__(self):
         return self.evento
     
->>>>>>> Stashed changes
