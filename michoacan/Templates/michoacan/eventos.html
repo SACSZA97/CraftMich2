@@ -1,16 +1,11 @@
-<<<<<<< Updated upstream
-{% extends "michoacan/home.html" %} {% block titulo%}ca {% endblock %} {%block
-contenido%}
-=======
-{% extends "michoacan/home.html" %} {% block titulo%}Carrusel {% endblock %}
-{%block contenido%}
->>>>>>> Stashed changes
+{% extends "michoacan/home.html" %} {% block titulo%}Eventos {% endblock %}
+{% block contenido%}
 
 <div class="section">
   <div class="container">
     <div class="row mb-5 align-items-center">
       <div class="col-lg-6" id="servicios>
-      <a class="font-weight-bold text-primary heading"> Nuestros Productos </a>
+      <a class="font-weight-bold text-primary heading"> Nuestros Eventos</a>
     </div>
     <div class="col-lg-6 text-lg-end">
       <p>
@@ -18,7 +13,7 @@ contenido%}
           href="services.html"
           target="_blank"
           class="btn btn-primary text-white py-3 px-4"
-          >Todos Nuestros Productos</a
+          >Todos Nuestros Eventos</a
         >
       </p>
     </div>
@@ -28,11 +23,11 @@ contenido%}
     <div class="col-12">
       <div class="property-slider-wrap">
         <div class="property-slider">
-          {% for articulo in articulos %}
+          {% for evento in eventos %}
           <div class="property-item">
             <a href="" class="img">
               <img
-                src="{{articulo.imagen.url}}"
+                src="{{evento.imagen.url}}"
                 height="500"
                 width="500"
                 alt="Image"
@@ -41,10 +36,10 @@ contenido%}
             </a>
 
             <div class="property-content">
-              <div class="price mb-2"><span>$ {{articulo.precio}}</span></div>
+              <div class="price mb-2"><span>$ {{evento.precio}}</span></div>
               <div>
                 <span class="d-block mb-2 text-black-50"></span>
-                <span class="city d-block mb-3">{{articulo.producto}}</span>
+                <span class="city d-block mb-3">{{evento.evento}}</span>
 
                 <div class="specs d-flex mb-4">
                   <span class="d-block d-flex align-items-center me-3">

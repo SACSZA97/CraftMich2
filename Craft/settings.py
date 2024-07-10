@@ -38,7 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'michoacan',
+<<<<<<< Updated upstream
     'base.apps.BaseConfig'
+=======
+    'base.apps.BaseConfig',
+    'crispy_forms',
+    'ckeditor',
+>>>>>>> Stashed changes
 ]
 
 MIDDLEWARE = [
