@@ -1,12 +1,7 @@
 from django import forms
-from .models import CrearEvento,Eventos
+from .models import CrearEvento
 
 class CrearEventoForm(forms.ModelForm):
     class Meta:
         model = CrearEvento
         fields = ['nombre','fecha','hora','lugar','tipo','descripcion']
-class EventosForm(forms.ModelForm):
-    class Meta:
-        model = Eventos
-        fields = ['imagen', 'evento', 'precio', 'descripcion']
-

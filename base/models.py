@@ -19,10 +19,6 @@ class Articulos(models.Model):
     
     def __str__(self):
 
-<<<<<<< Updated upstream
-        return self.nombre
-        #Indica que se mostrára el nombre como valor en la tabla
-=======
         return self.producto
         #Indica que se mostrára el nombre como valor en la tabla
 
@@ -40,21 +36,3 @@ class Login(models.Model):
         ('admin', 'Administrador'),
     ]
     roles = models.CharField(max_length=7, choices=OPCIONES_ROL, default='usuario')
-
-class Contactos(models.Model):
-    nombre=models.CharField(max_length=50)
-    correo= models.EmailField()
-    opciones_consulta=[
-      [0, 'consulta'], 
-      [1, 'Reclamo producto'],
-      [2, 'Reclamo Eventos'],
-      [3, 'Sugerencias de Eventos'],
-      [4, 'Sugerencia de Productos']
-    ]
-    mensaje= models.TextField()
-    avisos= models.BooleanField()
-    
-    def __str__(self):
-         return self.nombre
-
->>>>>>> Stashed changes

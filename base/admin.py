@@ -1,10 +1,6 @@
 from django.contrib import admin
 from .models import Articulos
 
-from .models import Contactos
-
-
-
 # Register your models here.
 class AdministrarModelo(admin.ModelAdmin):
     readonly_fields = ('created', 'updated')
@@ -13,9 +9,3 @@ class AdministrarModelo(admin.ModelAdmin):
     date_hierarchy = 'created'
     list_filter =('id', 'producto', 'precio',)
 admin.site.register(Articulos, AdministrarModelo)
-admin.site.register(Contactos)
-
-
-
-
-

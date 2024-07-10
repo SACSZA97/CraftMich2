@@ -16,23 +16,3 @@ class CrearEvento(models.Model):
         ordering = ["fecha"]
     def __str__(self):
         return self.nombre
-    
-class Eventos(models.Model):
-    id = models.AutoField(primary_key=True,verbose_name="Clave")
-    imagen = models.ImageField(null=True,upload_to="fotos",verbose_name="Fotografía")
-    evento= models.TextField(default='Eventos')
-    precio = models.PositiveIntegerField(default=0)
-    descripcion = models.TextField(default='Descripcion') #Texto largo
-    created = models.DateTimeField(auto_now_add=True, verbose_name="Creado") #Fecha y tiempo
-    updated = models.DateTimeField(auto_now_add=True, verbose_name="Actualizado")
-    
-    class Meta:
-        verbose_name = "Evento"
-        verbose_name_plural = "Eventos"
-        ordering = ["-created"]
-   
-        #el menos indica que se ordenara del más reciente al más viejo
-
-    def __str__(self):
-        return self.evento
-    

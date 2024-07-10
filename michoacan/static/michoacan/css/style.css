@@ -21,7 +21,7 @@
   --bs-red: #dc3545;
   --bs-orange: #fd7e14;
   --bs-yellow: #ffc107;
-  --bs-green: #1c29bb;
+  --bs-green: #198754;
   --bs-teal: #20c997;
   --bs-cyan: #0dcaf0;
   --bs-white: #fff;
@@ -36,14 +36,14 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #4a2100;
-  --bs-secondary: #1a9f9f;
-  --bs-success: #598719;
+  --bs-primary: #00204a;
+  --bs-secondary: #005555;
+  --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
-  --bs-dark: #5b1aa1;
+  --bs-dark: #212529;
   --bs-primary-rgb: 0, 32, 74;
   --bs-secondary-rgb: 0, 85, 85;
   --bs-success-rgb: 25, 135, 84;
@@ -58,13 +58,13 @@
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-font-sans-serif: "Work Sans", sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, rgba(205, 43, 43, 0.15), rgba(199, 36, 36, 0));
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #ffffff; }
+  --bs-body-bg: #fff; }
 
 *,
 *::before,
@@ -86,7 +86,7 @@ body {
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(212, 190, 218, 0); }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 hr {
   margin: 1rem 0;
@@ -185,7 +185,7 @@ small, .small {
 
 mark, .mark {
   padding: 0.2em;
-  background-color: #e3e5fc; }
+  background-color: #fcf8e3; }
 
 sub,
 sup {
@@ -201,7 +201,7 @@ sup {
   top: -.5em; }
 
 a {
-  color: #20004a;
+  color: #00204a;
   text-decoration: underline; }
   a:hover {
     color: #001a3b; }
@@ -482,7 +482,7 @@ progress {
   margin-top: -1rem;
   margin-bottom: 1rem;
   font-size: 0.875em;
-  color: #0f2f1f; }
+  color: #6c757d; }
   .blockquote-footer::before {
     content: "\2014\00A0"; }
 

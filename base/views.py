@@ -1,22 +1,19 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login as auth_login
+from django.contrib.auth.forms import AuthenticationForm
 from .models import Articulos
-<<<<<<< Updated upstream
-=======
 from .form import LoginForm
-from .forms import ArticulosForm,ContactosForm
+from .forms import ArticulosForm
 from django.http import HttpResponse
 from django.views.generic import View
-from django.shortcuts import get_object_or_404
->>>>>>> Stashed changes
 
 # Create your views here.
 def Carrusel(request):
     articulos=Articulos.objects.all()
     return render(request,"base/Carrusel.html", {'articulos':articulos})
-<<<<<<< Updated upstream
-=======
 
-def producto(request):
+def registrar(request):
     if request.method == 'POST':
         form = ArticulosForm(request.POST, request.FILES)
         if form.is_valid(): #Si los datos recibidos son correctos
@@ -26,27 +23,12 @@ def producto(request):
     #Si algo sale mal se reenvian al formulario los datos ingresados
     return render(request,'base/ForCarrusel.html',{'form': form})
 
-def eliminarCarrusel(request, id,
-    confirmacion='base/eliminarproducto.html'):
-    articulo = get_object_or_404(Articulos, id=id)
-    if request.method=='POST':
-        articulo.delete()
-        articulos=Articulos.objects.all()
-        return render(request,"base/Carrusel.html",{'articulos':articulos})
 
-    return render(request, confirmacion, {'object':articulo})
 
-def editarCarrusel(request, id):
-    articulo = get_object_or_404(Articulos, id=id)
-    form = ArticulosForm(request.POST, request.FILES, instance=articulo)
-    if form.is_valid():
-        form.save()
-        articulos=Articulos.objects.all()
-        return render(request,"base/Carrusel.html",{'articulos':articulos})
-    return render(request, "base/editarproducto.html", {'articulo':articulo})
+def contacto(request):
+   return render(request,"base/ForCarrusel.html")
 
-def mascarrusel(request):
-    return render(request,"base/mascarrusel.html")
+
 
 
 def registro(request):
@@ -91,20 +73,5 @@ class VRegistro(View):
        else:
            pass
         
-
-
-def Contactos(request):
-    data={
-        'form': ContactosForm()
-    }
-    if request.method == 'POST':
-     
-     formulario= ContactosForm(data=request.POST)
-     if formulario.is_valid():
-         formulario.save()
-         data["mensaje"] = "Contacto guardado"
     
 
-
-    return render(request,"base/contactanos.html", data)
->>>>>>> Stashed changes

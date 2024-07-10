@@ -1,22 +1,14 @@
 from django.shortcuts import render, HttpResponse
-from .forms import CrearEventoForm,EventosForm
-from .models import CrearEvento,Eventos
+from .forms import CrearEventoForm
+from .models import CrearEvento
 from django.shortcuts import get_object_or_404
-
-
 
 # Create your views here.
 def ca(request):
-<<<<<<< Updated upstream
-    return render(request, "michoacan/ca.html")
-=======
     return render(request, "michoacan/ca.html")
 
 def bienvenida(request):
     return render(request, "michoacan/bienvenida.html")
-
-def Quienessomos(request):
-    return render(request, "michoacan/Quienessomos.html")
 
 def CrearEventos(request):
     if request.method == 'POST':
@@ -64,9 +56,3 @@ def editarEvento(request, id):
         {'eventos':eventos})
     return render(request,"michoacan/editarEventos.html",
     {'evento':evento})
-
-def eventos(request):
-    eventos= Eventos.objects.all()
-    return render(request,"michoacan/eventos.html", {'eventos':eventos})
-
->>>>>>> Stashed changes
