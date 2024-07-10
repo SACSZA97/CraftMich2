@@ -23,7 +23,25 @@ from base import views as views_base
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ca/', views.ca, name="ca"),
+<<<<<<< Updated upstream
     path('', views_base.Carrusel, name="Carrusel")
+=======
+    path('ForCarrusel/',views_base.contacto,name="Contacto"),
+    path('registrar/',views_base.registrar,name="Registrar"),
+    path('bienvenida/', views.bienvenida, name="bienvenida"),
+    path('Quienessomos/', views.Quienessomos, name="Quienessomos"),
+    path('registro/', views_base.registro, name="Registro"),
+    path('login/', views_base.login, name="Login"),
+    path('', views_base.Carrusel, name="Carrusel"),
+    path('accounts', include('django.contrib.auth.urls')),
+    path('CrearEvento/', views_mich.CrearEventos, name="CrearEvento"),
+    path('ConsultarEvento/', views_mich.ConsultarEvento, name="ConsultarEvento"),
+    path('eliminarEvento/<int:id>/',views_mich.eliminarEvento,name='Eliminar'),
+    path('formEditarEvento/<int:id>/',views_mich.ConsultarEventoIndividual, name='ConsultaIndividual'),
+    path('editarEvento/<int:id>/',views_mich.editarEvento,name='Editar'),
+    path('Contactos/',views_base.Contactos,name="Contactos"),
+     path('eventos', views_mich.eventos, name="eventos"),
+>>>>>>> Stashed changes
 ]
 
 if settings.DEBUG:
