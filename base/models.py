@@ -34,3 +34,18 @@ class Articulos(models.Model):
 
         return self.nombre
         #Indica que se mostrára el nombre como valor en la tabla
+
+from django.db import models
+
+class Login(models.Model):
+    # Campos de texto
+    usuario = models.CharField(max_length=30, unique=True)
+    nombre = models.CharField(max_length=50)
+    email = models.EmailField(unique=True)
+    password = models.CharField(max_length=25)
+    fecha = models.DateTimeField()
+    OPCIONES_ROL = [
+        ('usuario', 'Usuario normal'),
+        ('admin', 'Administrador'),
+    ]
+    roles = models.CharField(max_length=7, choices=OPCIONES_ROL, default='usuario')
