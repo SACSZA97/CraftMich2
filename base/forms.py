@@ -1,5 +1,5 @@
 from django import forms
-from .models import Articulos
+from .models import Articulos,Contactos
 
 class ArticulosForm(forms.ModelForm):
     class Meta:
@@ -18,4 +18,14 @@ class LoginForm(forms.ModelForm):
             'password',
             'fecha',
             'roles',
+        ]
+class ContactosForm(forms.ModelForm):
+    class Meta:
+        model = Contactos
+        fields = [
+            'nombre',
+            'correo',
+            'mensaje',
+            'avisos'
+
         ]

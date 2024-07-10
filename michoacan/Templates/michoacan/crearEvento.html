@@ -21,7 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-{% load static%}
+    {% load static%}
     <link rel="stylesheet" href="fonts/icomoon/style.css" />
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
 
@@ -29,9 +29,7 @@
     <link rel="stylesheet" href="{%static 'michoacan/css/aos.css' %}" />
     <link rel="stylesheet" href="{%static 'michoacan/css/style.css' %}" />
 
-    <title>
-      Crear Evento
-    </title>
+    <title>Crear Evento</title>
   </head>
   <body>
     <div class="site-mobile-menu site-navbar-target">
@@ -47,30 +45,22 @@
       <div class="container">
         <div class="menu-bg-wrap">
           <div class="site-navigation">
-            <a href="index.html" class="logo m-0 float-start">Craft Mich.</a>
+            <a href="{%url 'Carrusel'%}" class="logo m-0 float-start"
+              >Craft Mich.</a
+            >
 
             <ul
               class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
             >
-              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="{%url 'Carrusel'%}">Inicio</a></li>
+              <li><a href="{%url 'Contactos'%}">Contactanos</a></li>
               <li class="has-children">
-                <a href="properties.html">Servicios</a>
-                <ul class="dropdown">
-                  <li><a href="#">Buy Property</a></li>
-                  <li><a href="#">Sell Property</a></li>
-                  <li class="has-children">
-                    <a href="#">Dropdown</a>
-                    <ul class="dropdown">
-                      <li><a href="#">Sub Menu One</a></li>
-                      <li><a href="#">Sub Menu Two</a></li>
-                      <li><a href="#">Sub Menu Three</a></li>
-                    </ul>
-                  </li>
-                </ul>
+                <a href="{%url 'Carrusel'%}">Eventos</a>
               </li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="about.html">Màs</a></li>
-              <li class="active"><a href="{% url 'CrearEvento' %}">Agregar Evento</a></li>
+
+              <li class="active">
+                <a href="{% url 'CrearEvento' %}">Agregar Evento</a>
+              </li>
             </ul>
 
             <a
@@ -101,7 +91,9 @@
               data-aos-delay="200"
             >
               <ol class="breadcrumb text-center justify-content-center">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item">
+                  <a href="{%url 'Carrusel'%}">INICIO</a>
+                </li>
                 <li
                   class="breadcrumb-item active text-white-50"
                   aria-current="page"
@@ -119,7 +111,11 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <form action="{% url 'CrearEvento' %}"  method="POST" onsubmit="alert('Evento Registrado')">
+            <form
+              action="{% url 'CrearEvento' %}"
+              method="POST"
+              onsubmit="alert('Evento Registrado')"
+            >
               {% csrf_token %}
               <div class="row">
                 <div class="col-6 mb-3">
@@ -178,13 +174,9 @@
                     required
                   ></textarea>
                 </div>
-    
+
                 <div class="col-12">
-                  <input
-                    type="submit"
-                    value="Enviar"
-                    class="btn btn-primary"
-                  />
+                  <input type="submit" value="Enviar" class="btn btn-primary" />
                 </div>
               </div>
             </form>
@@ -192,12 +184,11 @@
         </div>
       </div>
     </div>
-    
+
     <!-- /.untree_co-section -->
 
     <div class="site-footer">
       <div class="container">
-
         <!-- /.row -->
 
         <div class="row mt-5">

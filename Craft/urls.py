@@ -25,9 +25,13 @@ from michoacan import views as views_mich
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ca/', views.ca, name="ca"),
-    path('ForCarrusel/',views_base.contacto,name="Contacto"),
-    path('registrar/',views_base.registrar,name="Registrar"),
+    path('producto/',views_base.producto,name="Producto"),
+    path('eliminarCarrusel/<int:id>/',views_base.eliminarCarrusel, name='Eliminarcarrusel'),
+    path('editarCarrusel/<int:id>/',views_base.editarCarrusel, name='Editarcarrusel'),
+    path('mascarrusel/',views_base.mascarrusel,name="Mascarrusel"),
+    
     path('bienvenida/', views.bienvenida, name="bienvenida"),
+    path('Quienessomos/', views.Quienessomos, name="Quienessomos"),
     path('registro/', views_base.registro, name="Registro"),
     path('login/', views_base.login, name="Login"),
     path('', views_base.Carrusel, name="Carrusel"),
@@ -37,6 +41,8 @@ urlpatterns = [
     path('eliminarEvento/<int:id>/',views_mich.eliminarEvento,name='Eliminar'),
     path('formEditarEvento/<int:id>/',views_mich.ConsultarEventoIndividual, name='ConsultaIndividual'),
     path('editarEvento/<int:id>/',views_mich.editarEvento,name='Editar'),
+    path('Contactos/',views_base.Contactos,name="Contactos"),
+     path('eventos', views_mich.eventos, name="eventos"),
 ]
 
 if settings.DEBUG:
